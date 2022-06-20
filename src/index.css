@@ -1,13 +1,141 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Utilities */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
+
+.row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.jc-sp-btw {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jc-sp-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ai-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  gap: 9px;
+}
+
+/* ----- */
+#calculator-view {
+  width: 385px;
+  height: 775px;
+  background-color: #000;
+  border-radius: 70px;
+  border: 10px solid #333;
+}
+
+#calculator-view #viewport {
+  width: 90%;
+  height: 70%;
+}
+
+#calculator-view #viewport #display {
+  width: 100%;
+}
+
+#calculator-view #viewport #display input {
+  border: none;
+  outline: none;
+  font-size: 6rem;
+  background-color: #000;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+}
+
+#calculator-view #viewport #keypad {
+  width: 97%;
+}
+
+#calculator-view #viewport #keypad button {
+  border: none;
+  border-radius: 50px;
+  width: 75px;
+  height: 75px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#calculator-view #viewport #keypad button.fx-key {
+  background-color: #a5a5a5;
+  color: #000;
+}
+
+#calculator-view #viewport #keypad button.fx-key:hover {
+  background-color: #c4c4c4;
+}
+
+#calculator-view #viewport #keypad button.numeric-key {
+  background-color: #333;
+}
+
+#calculator-view #viewport #keypad button.numeric-key:hover {
+  background-color: #444;
+}
+
+#calculator-view #viewport #keypad button.op-key {
+  background-color: #ff9d20;
+  font-size: 3rem;
+}
+
+#calculator-view #viewport #keypad button.op-key:hover {
+  background-color: #ffb657;
+}
+
+#calculator-view #viewport #keypad button.special {
+  width: 100%;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
+      grid-column-end: span 2;
+  text-align: left;
+  padding-left: 25px;
+}
+/*# sourceMappingURL=index.css.map */
