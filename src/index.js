@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import Calculator from "./components/Calculator";
 import "./index.css";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <Calculator />
   </React.StrictMode>,
-  document.getElementById("root")
 );

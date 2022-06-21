@@ -33,7 +33,7 @@ $buttonSize: 75px;
 }
 
 .column {
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
 }
 
 .flex-end {
@@ -62,6 +62,15 @@ $buttonSize: 75px;
   gap: 9px;
 }
 /* ----- */
+
+
+
+#root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 #calculator-view {

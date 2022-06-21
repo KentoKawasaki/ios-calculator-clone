@@ -26,7 +26,7 @@ const Keypad = (props) => {
       label: "0",
       value: "0",
       type: "numeric",
-      buttonStyle: "nuemeric-key special",
+      buttonStyle: "numeric-key special",
     },
     { label: "・", value: ".", type: "fx", buttonStyle: "numeric-key" },
   ];
